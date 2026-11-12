@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaaS Legal - Generador de Contratos</title>
+    <!-- Fuentes tipográficas -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Hoja de estilos externa -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Lógica de cliente externa con defer para no bloquear el renderizado -->
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+
+    <div class="dashboard-card">
+        <div class="card-header">
+            <h2>Portal LegalTech</h2>
+            <p>Emisión segura de Acuerdos de Confidencialidad</p>
+        </div>
+        
+        <div class="card-body">
+            <form id="formularioContrato">
+                <div class="form-group">
+                    <label>Título del Documento</label>
+                    <input type="text" name="titulo" required value="Acuerdo de Confidencialidad (NDA)">
+                </div>
+                
+                <div class="form-group">
+                    <label>Entidad / Parte Reveladora</label>
+                    <input type="text" name="cliente" required placeholder="Ej: TechSolutions S.L.">
+                </div>
+
+                <div class="form-group">
+                    <label>Cláusulas del Contrato</label>
+                    <textarea name="clausulas" rows="5" required>La Parte Receptora se compromete a mantener el más estricto secreto respecto a toda la información confidencial facilitada por la Parte Reveladora.</textarea>
+                </div>
+
+                <button type="submit" id="btnGenerar">
+                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Generar y Descargar PDF
+                </button>
+            </form>
+            <div id="mensaje">✅ Documento encriptado y generado con éxito.</div>
+        </div>
+    </div>
+
+</body>
+</html>
